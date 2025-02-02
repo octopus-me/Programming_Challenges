@@ -23,31 +23,35 @@ using namespace std;
 // Each string does not contain leading zeros except for the zero itself.
 
 class Solution {
-public:
-    int maxArea(vector<int>& height) {
-        int left = 0, right = height.size() -1;
+    public:
+        string addBinary(string a, string b) {
+            int indexA = a.size() - 1, indexB = b.size() - 1;
 
-        int area = 0;
+            int carry = 0;
 
-        while(left < right){
+            string answer = "";
 
-            int current_area ;
+            while(indexA >= 0 || indexB >= 0 || carry != 0) {
+                int sum = 0;
+                if(indexA >= 0) {
+                    sum += a[indexA--] - '0';
 
-            if(height[right] > height[left]){
-                current_area = (right-left)*height[left];
-                left++;
 
-            } else {
-                current_area = (right-left)*height[right];
-                right--;
+                }
+
+                if (indexB >= 0) {
+                    sum += b[indexB--] - '0';
+                }
+
+                sum += carry;
+                answer += to_string(sum%2) ;
+                carry = sum / 2;
 
             }
-
-            if(current_area > area) area = current_area;
+            reverse(answer.begin(), answer.end());
+            return answer;
 
         }
-        return area;
-    }
 };
 
 int main(){
