@@ -1,3 +1,5 @@
 - I practiced solving problems with arrays.
 - I noticed some problems working with **2DArrays**, more specifically while traversing the diagonals.
 - **Two pointers** is a powerful technique that solves problems by using two indices moving through a data structure concurrently, often reducing nested loops to linear time. It's particularly effective for array and string problems—such as pair-sum, container with most water, or palindrome checking—where you need to compare or combine elements from different ends.
+
+- If you're tracking a streak/sequence, always check if it need a final update after the loop. -> A common pattern is to update the result inside the loop when a break occurs (like a 0) and once more at the end to handle the last streak. []
