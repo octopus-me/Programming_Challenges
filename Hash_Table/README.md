@@ -26,3 +26,6 @@ auto it = hashmap.find(2);
 if(it == hashmap.end()) // Element not found;
 else // Element was found and it points to the element;
 ```
+
+
+- A valuable lesson I learned while solving hash map problems is to consider the possibility that the problem could work as a bijective function. It's important to approach the problem from both directions, ensuring that both mappings (key to value and value to key) are taken into account.
