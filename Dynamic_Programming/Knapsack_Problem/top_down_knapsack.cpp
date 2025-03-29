@@ -24,7 +24,7 @@ class Solution{
 
         int notIncludeCurrent = rec_knapsack(profits, weight, W, n-1, memo);
 
-        return max(includeCurrent, notIncludeCurrent);
+        return memo[n][W] =  max(includeCurrent, notIncludeCurrent);
 
 
 
