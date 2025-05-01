@@ -50,7 +50,6 @@ class Solution{
             }
             return max_value.first;
         }
-
 };
 
 int main(){
